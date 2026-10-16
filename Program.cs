@@ -42,7 +42,7 @@
             Console.WriteLine("b: ");
             int b = Convert.ToInt32(Console.ReadLine());
 
-            foreach (int item in tomb)
+            for (int item = 0; item < N; item++)
             {
                 tomb[item] = r.Next(a, b);
             }
