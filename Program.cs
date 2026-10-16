@@ -2,6 +2,7 @@
 {
     internal class Program
     {
+        static Random r = new Random();
         static void feladat5()
         {
 
@@ -29,13 +30,31 @@
             int valasz = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Az a: " + tomb[valasz-1]);
         }
-        static void feladat14() 
+        static void feladat14()
         {
+            Console.WriteLine("Kérek egy egész számot: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+            int[] tomb = new int[N];
 
+            Console.WriteLine("milyen 2 intervallumból töltsük fel a számokat?");
+            Console.WriteLine("a: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("b: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+
+            foreach (int item in tomb)
+            {
+                tomb[item] = r.Next(a, b);
+            }
+            for (int i = 0; i < N; i++) 
+            { 
+            Console.WriteLine($"A(z){i + 1} szam: {tomb[i]}");
+            }
         }
         static void Main(string[] args)
         {
             //feladat5();    
+            feladat14();
         }
     }
 }
