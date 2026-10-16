@@ -20,6 +20,10 @@
             {
                 Console.WriteLine($"A(z) {i}. szám: {tomb[i - 1]}");
             }
+            for(int i = 0;i < tomb.Length; i+=2)
+            {
+                Console.WriteLine(tomb[i]);
+            }
 
         }
         static void Main(string[] args)
