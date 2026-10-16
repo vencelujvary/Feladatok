@@ -11,9 +11,10 @@
                 Console.WriteLine($"Kérem a(z) {i+1}. számot: ");
                 tomb[i] = Convert.ToInt32(Console.ReadLine());
             }
-            for (int i = 0;i < tomb.Length; i++)
+            Console.WriteLine("");
+            foreach (int item in tomb)
             {
-                Console.WriteLine($"A(z) {i + 1}. szám: {tomb[i]}");
+                Console.WriteLine(item);
             }
             Console.WriteLine("");
             for (int i = 5; i > 0; i--)
@@ -24,7 +25,9 @@
             {
                 Console.WriteLine(tomb[i]);
             }
-
+            Console.WriteLine("Hanyadik számot kéred?: ");
+            int valasz = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Az a: " + tomb[valasz-1]);
         }
         static void Main(string[] args)
         {
