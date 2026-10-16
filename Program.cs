@@ -2,7 +2,7 @@
 {
     internal class Program
     {
-        static void feladat1()
+        static void feladat5()
         {
 
             int[] tomb = new int[5];
@@ -17,11 +17,11 @@
                 Console.WriteLine(item);
             }
             Console.WriteLine("");
-            for (int i = 5; i > 0; i--)
+            for (int i = tomb.Length-1; i >= 0; i--)
             {
-                Console.WriteLine($"A(z) {i}. szám: {tomb[i - 1]}");
+                Console.WriteLine($"A(z) {i}. szám: {tomb[i]}");
             }
-            for(int i = 0;i < tomb.Length; i+=2)
+            for(int i = 1;i < tomb.Length; i+=2)
             {
                 Console.WriteLine(tomb[i]);
             }
@@ -29,9 +29,13 @@
             int valasz = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Az a: " + tomb[valasz-1]);
         }
+        static void feladat14() 
+        {
+
+        }
         static void Main(string[] args)
         {
-            feladat1();    
+            //feladat5();    
         }
     }
 }
