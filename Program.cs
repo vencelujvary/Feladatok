@@ -15,6 +15,12 @@
             {
                 Console.WriteLine($"A(z) {i + 1}. szám: {tomb[i]}");
             }
+            Console.WriteLine("");
+            for (int i = 5; i > 0; i--)
+            {
+                Console.WriteLine($"A(z) {i}. szám: {tomb[i - 1]}");
+            }
+
         }
         static void Main(string[] args)
         {
